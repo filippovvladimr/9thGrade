@@ -1,3 +1,4 @@
+import string
 def is_Polindrom(string):
     str = ""
     x = len(string)//2
