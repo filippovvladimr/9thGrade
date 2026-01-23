@@ -1,0 +1,57 @@
+def is_Polindrom(string):
+    str = ""
+    x = len(string)//2
+    for i in range(x):
+        str += string[i]
+    reversed_s = str[::-1]
+    if(string.startswith(str) and  string.endswith(reversed_s)):
+        return True
+    else:
+        return False
+
+
+# print(is_Polindrom('abha'))
+
+def LongestWorldInSentence(sentence):
+     array = sentence.split()
+     world = ""
+     length = 0
+     for i in range(len(array)):
+         if(len(array[i]) > length):
+             world= array[i]
+             length = len(array[i])
+
+     return world
+
+
+
+
+
+def cap(List):
+    for i in range (len(List)):
+        List[i] = List[i].capitalize()
+
+
+def count_vowels_consonants(text):
+    vowels = set("аеёиоуыэюя")
+    text_lower = text.lower()
+    vowel_count = 0
+    consonant_count = 0
+
+    for char in text_lower:
+        if char.isalpha():
+            if char in vowels:
+                vowel_count += 1
+            else:
+                consonant_count += 1
+
+    return vowel_count, consonant_count
+
+text = "Яесвгстнкдязнглмсп"
+vowels, consonants = count_vowels_consonants(text)
+print(vowels, consonants)
+
+def Domain(email):
+    domain = email.split("@")
+    return domain[1]
+
