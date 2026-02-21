@@ -1,6 +1,6 @@
 import turtle as t
 
-t.speed("fastest")
+t.speed(10)
 #square
 # for _ in range(4):
 #     for _ in range(3):
@@ -112,6 +112,32 @@ def draw_Dragon(str,n):
 
 
 
-draw_Dragon("FX",100)
+#draw_Dragon("FX",100)
+
+def draw_ChristmasTree(distance, stick_size, n, m):
+        t.right(150)
+        t.forward(stick_size)
+        t.goto(0,0)
+        t.left(120)
+        t.forward(stick_size)
+        t.goto(0,0)
+        t.right(60)
+        t.forward(distance)
+        apr = m
+        for i in range(n-1):
+            t.left(60)
+            t.forward(stick_size + apr)
+            t.left(180)
+            t.forward(stick_size + apr)
+            t.left(60)
+            t.forward(stick_size + apr)
+            t.left(180)
+            t.forward(stick_size + apr)
+            t.right(120)
+            t.forward(distance)
+            apr += m
+
+
+draw_ChristmasTree(25, 15, 7,10)
 t.done()
 
